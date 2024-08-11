@@ -1,0 +1,140 @@
+@import './../styles/base.scss';
+
+.main-header{
+    &-content{
+        width: 100%;
+        height: 600px;
+        position: relative;
+        @include breakpoint(xs){
+            height: 406px;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 600px;
+        @include breakpoint(xs){
+            height: 406px;
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 48px;
+        line-height: 60px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        position: absolute;
+        top: 342px;
+        right: 0px;
+        width: 60%;
+        height: 136px;
+        background: rgba(0, 112, 112, 0.9);
+        display: flex;
+        align-items: center;
+        @include breakpoint(tab-icon){
+            width: 100%;
+            top: inherit;
+            font-size: 25px;
+            line-height: 31px;
+            bottom: 0;
+            text-align: center;
+            height: 66px;
+            display: inline-block;
+        }
+
+
+        & span{
+            font-weight: bold;
+            margin-left: 90px;
+            @include breakpoint(xs){
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+.main-about{
+    margin-top: 72px;
+    &-content{
+        width: 100%;
+        height: 450px;
+        position: relative;
+        @include breakpoint(xs){
+            height: 254px;
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 450px;
+        @include breakpoint(xs){
+            height: 254px;
+        }
+        & img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__text{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        background: rgba(0, 112, 112, 0.9);
+        padding: 16px 74px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include breakpoint(xs){
+            font-size: 26px;
+            line-height: 26px;
+            padding: 5px;
+            width: 80%;
+        }
+        
+        & span{
+            font-weight: 600; 
+        }
+    }
+    &__more{
+        position: absolute;
+        right: 0;
+        top: 60px;
+        @include breakpoint(big-land){
+            top: initial;
+        }
+        & a {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            padding: 3px 17px;
+            background: rgba(0, 0, 0, 0.8);
+            @include breakpoint(xs){
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+    }
+}
+
+.main-most-bought{
+    margin-top: 53px;
+}
+
+
+
+
+

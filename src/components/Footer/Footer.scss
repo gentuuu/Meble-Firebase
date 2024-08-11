@@ -1,0 +1,165 @@
+@import '../../styles/base.scss';
+
+.main-footer {
+    margin-top: 79px;
+
+    &-top {
+        background: rgba(0, 0, 0, 0.8);
+        height: 145px;
+        @include breakpoint(tab-port) {
+            height: auto;
+        } 
+    }
+
+    &-copyright {
+        background: rgba(0, 112, 112, 0.95);
+        height: 40px;
+        text-align: center;
+
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navigation-footer {
+    //   position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: 300ms;
+    //   background-color: #00274b;
+    height: 62px;
+    display: flex;
+    align-items: center;
+
+
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        transition: .3s;
+        position: relative;
+        padding-top: 30px;
+          @include breakpoint(tab-land){
+            flex-direction: column;
+          }
+
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+
+          @include breakpoint(tab-port) {
+              flex-direction: row-reverse;
+          }  
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+          @include breakpoint(tab-port) {
+            flex-direction: column;
+            }  
+    }
+
+
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    &__list {
+
+        display: flex;
+        list-style: none;
+        align-items: center;
+          @include breakpoint(tab-port) {
+            flex-direction: column;
+            margin-top: 20px;
+            }  
+
+
+    }
+
+    &__link1 {
+        margin: 0 10px;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+
+        & img {
+            margin-left: 5px;
+        }
+
+
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    &__right-span {
+        font-size: 20px;
+        color: #000;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    &__item {
+        margin: 1rem 4rem;
+
+    }
+
+
+
+
+
+    &-social {
+        &-content {
+            display: flex;
+            align-items: center;
+              @include breakpoint(tab-port){
+                margin-bottom: 20px;
+              }
+
+        }
+
+        &-img {
+            & img {
+                padding: 10px;
+                // margin:0 9px;
+            }
+
+        }
+    }
+}
