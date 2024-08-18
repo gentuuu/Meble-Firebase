@@ -7,6 +7,7 @@ import arrangments from '../assets/data/arrangment';
 import CommonSection from '../components/CommonSection/CommonSection'
 import BlogItem from '../components/Blog/BlogItem'
 import ArrangmentItem from '../components/Arrangment/ArrangmentItem'
+import Pagination from '../components/Pagination/Pagination';
 
 const Blogs = () => {
   return (
@@ -18,15 +19,10 @@ const Blogs = () => {
                     <div className="main-blog-items">
                         {blogs?.map((blog, index) => (
                                 <BlogItem key={index} blog={blog} />
-                            ))}
+                        ))}
                     </div>
-                    <div className="pagination">
-                        <div className="pagination-content">
-                            <span className="pagination-item active">1</span>
-                            <Link href="#" className="pagination-item">2</Link>
-                            <Link  href="" className="pagination-item">3</Link>
-                        </div>
-                    </div>
+                    
+                    <Pagination />
 
                 </div>
             </div>
@@ -41,7 +37,7 @@ const Blogs = () => {
                             <ArrangmentItem key={arrangment.id} arrangment={arrangment} />
                         ))}
                     </div>
-                    <Link to="/aranzacje" class="page-arrangment-all">zobacz wszystkie aranżacje</Link>
+                    <Link to="/aranzacje" className="page-arrangment-all">zobacz wszystkie aranżacje</Link>
                 </div>
             </div>
         </div>
