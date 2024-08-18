@@ -18,19 +18,19 @@ const Header = () => {
               <div className="navigation-content">
                 <ul className="navigation__list">
                   <li className="navigation__item">
-                    <NavLink to='/asd'>Meble</NavLink>
+                    <NavLink to='/'>Meble</NavLink>
                   </li>
                   <li className="navigation__item">
-                    <NavLink to='/asd'>Blog</NavLink>
+                    <NavLink to='/blogs'>Blog</NavLink>
                   </li>
                   <li className="navigation__item">
-                    <NavLink to='/asd'>Aranżacje</NavLink>
+                    <NavLink to='/aranzacje'>Aranżacje</NavLink>
                   </li>
                 </ul>
               </div>
               <div className="navigation-social">
-              <Link href=""><GrFacebookOption /></Link>
-              <Link href=""><AiFillInstagram /></Link>
+                <Link href=""><GrFacebookOption /></Link>
+                <Link href=""><AiFillInstagram /></Link>
               </div>
             </div>
           </div>
