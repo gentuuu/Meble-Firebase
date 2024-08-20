@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const BlogItem = ({ blog }) => {
   return (
     <>
-        <Link to='#' className="main-blog-item">
+        <Link to={blog.id} className="main-blog-item">
             <div className="main-blog-item__img">
                 <img src={blog.imgUrl} alt="" />
             </div>
