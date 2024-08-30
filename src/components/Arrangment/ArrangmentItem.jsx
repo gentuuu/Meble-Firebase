@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const ArrangmentItem = ({ arrangment }) => {
   return (
     <>
-        <Link to="#" className="main-arrangment-item">
+        <Link to={`/aranzacje/${arrangment.id}`} className="main-arrangment-item">
             <div className="main-arrangment-item__img">
                 <img src={arrangment.imgUrl} alt="" />
             </div>
