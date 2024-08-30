@@ -56,11 +56,6 @@ const arrangment = [
     description: "Aranżacja 'Nowoczesna Łazienka' to połączenie elegancji z funkcjonalnością. Projekt obejmuje minimalistyczne meble, nowoczesne płytki i stylowe dodatki. Jasne kolory i innowacyjne rozwiązania, takie jak deszczownica i podświetlane lustra, tworzą przestrzeń, która jest zarówno praktyczna, jak i estetyczna."
   }
 
-
-
-
-
-
 ]
 
 export default arrangment;
