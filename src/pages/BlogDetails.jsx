@@ -2,12 +2,14 @@ import './Pages.scss'
 import blogs from '../assets/data/blogs'
 import products from '../assets/data/products'; 
 import arrangments from '../assets/data/arrangment'; 
+import star from '../assets/images/star.png'
 
 import { useParams } from 'react-router-dom'
 import ProductsItem from '../components/Product/ProductsItem';
 import CommonSection from '../components/CommonSection/CommonSection';
 import BlogItem from '../components/Blog/BlogItem';
 import ArrangmentItem from '../components/Arrangment/ArrangmentItem';
+import { useRef, useState } from 'react';
 
 
 
@@ -18,6 +20,25 @@ const BlogDetails = () => {
     const blog = blogs.find(item=>item.id === id);
 
     const {imgUrl, productName, category, shortDesc, description, avgRating, reviews} = blog;
+
+    const [rating, setRating] = useState(null)
+    const reviewUser = useRef('')
+    const reviewMsg = useRef('')
+
+    const sumbitHandler = (e)=>{
+        e.preventDefault()
+
+        const reviewUserName = reviewUser.current.value
+        const reviewUserMsg = reviewMsg.current.value
+
+        const reviewObj = {
+            userName: reviewUserName,
+            text: reviewUserMsg,
+            rating,
+        };
+
+        console.log(reviewObj);
+    }
 
     return (
     <div className="page-blog">
@@ -83,21 +104,21 @@ const BlogDetails = () => {
 
 
                 <div className="comment-add">
-                    <form action="" method="POST" className="comment-add-form">
+                    <form action="" onSubmit={sumbitHandler} className="comment-add-form">
                         <div className="comment-add-top">
                             <div className="comment-add-title">Dodaj komentarz</div>
                             <div className='comment-add-stars'>
-                                <img src="img/star.png" alt=""/>
-                                <img src="img/star.png" alt=""/>
-                                <img src="img/star.png" alt=""/>
-                                <img src="img/star.png" alt=""/>
-                                <img src="img/star.png" alt=""/>
+                                <img onClick={()=> setRating(1)} src={star} alt=""/>
+                                <img onClick={()=> setRating(2)} src={star} alt=""/>
+                                <img onClick={()=> setRating(3)} src={star} alt=""/>
+                                <img onClick={()=> setRating(4)} src={star} alt=""/>
+                                <img onClick={()=> setRating(5)} src={star} alt=""/>
                             </div>
                         </div>
                         <textarea className="comment-add-textarea" name="message" id="message"
-                            placeholder="Treść wiadomości" required></textarea>
+                            placeholder="Treść wiadomości" ref={reviewMsg} required></textarea>
                         <div className="comment-add-row">
-                            <input className="comment-add-input" name="name" id="name" type="text" placeholder="Imię"
+                            <input className="comment-add-input" name="name" id="name" type="text"  ref={reviewUser} placeholder="Imię"
                                 required />
                             <button type="submit" className="comment-add-btn">Wyślij</button>
                         </div>
